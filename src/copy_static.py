@@ -1,10 +1,10 @@
 import shutil
 import os
 
-public_path = "public/"
 static_path = "static/"
 
-def copy_static():
+def copy_static(public_path):
+    print(f"Copying static content from {static_path} to {public_path}")
     if os.path.exists(public_path):
         shutil.rmtree(public_path)
         os.mkdir(public_path)
